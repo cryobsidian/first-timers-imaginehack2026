@@ -1,0 +1,23 @@
+[
+  {
+    "id": "carrier-northstar",
+    "name": "NorthStar Haulage",
+    "verified": true,
+    "rating": 4.8,
+    "completedJobs": 184
+  },
+  {
+    "id": "carrier-meridian",
+    "name": "Meridian Logistics",
+    "verified": true,
+    "rating": 4.4,
+    "completedJobs": 76
+  },
+  {
+    "id": "carrier-unverified",
+    "name": "Demo Unverified Carrier",
+    "verified": false,
+    "rating": 4.9,
+    "completedJobs": 3
+  }
+]

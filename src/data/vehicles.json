@@ -1,0 +1,29 @@
+[
+  {
+    "id": "vehicle-northstar-1",
+    "carrierId": "carrier-northstar",
+    "vehicleType": "5-tonne box truck",
+    "plateNumber": "VBL 2026",
+    "maxWeightKg": 5000,
+    "maxPallets": 10,
+    "refrigerated": false
+  },
+  {
+    "id": "vehicle-meridian-1",
+    "carrierId": "carrier-meridian",
+    "vehicleType": "Refrigerated truck",
+    "plateNumber": "WBL 8080",
+    "maxWeightKg": 4000,
+    "maxPallets": 8,
+    "refrigerated": true
+  },
+  {
+    "id": "vehicle-unverified-1",
+    "carrierId": "carrier-unverified",
+    "vehicleType": "Cargo van",
+    "plateNumber": "UBL 1111",
+    "maxWeightKg": 1500,
+    "maxPallets": 3,
+    "refrigerated": false
+  }
+]

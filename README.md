@@ -1,42 +1,41 @@
-<<<<<<< Updated upstream
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-=======
 # Imagine Hack 2026 - BalikLoad
 
 BalikLoad matches spare capacity on commercial vehicles' return journeys with compatible SME shipments.
->>>>>>> Stashed changes
-
-Currently, two official plugins are available:
-
-<<<<<<< Updated upstream
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-=======
-1. Read [`AGENTS.md`](AGENTS.md) for repository working rules.
-2. Review product scope in [`docs/PROJECT_CONTEXT.md`](docs/PROJECT_CONTEXT.md).
-3. Review technical boundaries in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
-4. Select work from [`docs/TASKS.md`](docs/TASKS.md).
-5. Record consequential choices in [`docs/DECISIONS.md`](docs/DECISIONS.md).
->>>>>>> Stashed changes
-
-## React Compiler
-
-<<<<<<< Updated upstream
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-The product, MVP architecture, golden demo, and implementation order are confirmed in the Imaginehack Google Doc's **Tech Stack** tab. Application scaffolding is the next step.
-
-## Confirmed stack
-
-React, Vite, strict TypeScript, React Router with `HashRouter`, Context/useReducer, JSON seed data, `localStorage`, Vitest, ESLint, Prettier, GitHub Actions, and GitHub Pages.
 
 ## Development
 
-Install, development, testing, build, and deployment commands will be added when the application is scaffolded.
->>>>>>> Stashed changes
+```bash
+npm ci
+npm run dev
+```
+
+## Quality checks
+
+```bash
+npm run lint
+npm run format:check
+npm run typecheck
+npm test
+npm run build
+```
+
+## Architecture
+
+BalikLoad is a static React application built with Vite and strict TypeScript. React components call application services, which persist through a Promise-based repository interface. The MVP repository uses bundled JSON seed data and the versioned `balikload:v1` browser storage namespace.
+
+The application uses `HashRouter` and is deployed to GitHub Pages without a backend or external service dependency. Carbon results are illustrative estimates rather than audited carbon accounting.
+
+Read [AGENTS.md](AGENTS.md), [project context](docs/PROJECT_CONTEXT.md), [architecture](docs/ARCHITECTURE.md), and [tasks](docs/TASKS.md) before making changes.
+
+## Demo flow
+
+1. Open the seeded dashboard.
+2. Create or select an SME shipment.
+3. Review deterministic ranked matches and their explanations.
+4. Accept the strongest match.
+5. Confirm the shipment status, reduced trip capacity, and illustrative benefits.
+6. Use **Reset Demo Data** to restore the original scenario.
+
+## Deployment
+
+Pushes to `main` can deploy through `.github/workflows/deploy-pages.yml`. The production Vite base path is `/first-timers-imaginehack2026/`.

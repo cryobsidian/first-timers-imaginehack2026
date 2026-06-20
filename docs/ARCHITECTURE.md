@@ -44,12 +44,12 @@ There is no deployed Node.js or Express backend. Node.js is local tooling only. 
 
 ## Services
 
-| Service | Responsibility |
-| --- | --- |
-| Matching | Hard compatibility filters, weighted scoring, deterministic ranking, explanations |
-| Validation | Shipment and return-trip rules with actionable errors |
-| Booking | Idempotent acceptance transaction, status updates, capacity updates, competing-match rejection |
-| Impact | Illustrative utilisation, avoided-distance, carbon, and cost estimates |
+| Service    | Responsibility                                                                                 |
+| ---------- | ---------------------------------------------------------------------------------------------- |
+| Matching   | Hard compatibility filters, weighted scoring, deterministic ranking, explanations              |
+| Validation | Shipment and return-trip rules with actionable errors                                          |
+| Booking    | Idempotent acceptance transaction, status updates, capacity updates, competing-match rejection |
+| Impact     | Illustrative utilisation, avoided-distance, carbon, and cost estimates                         |
 
 ## Persistence lifecycle
 
@@ -80,14 +80,14 @@ Clamp scores to 0-100. Rank by score descending, detour ascending, departure asc
 
 ## Demo reliability and operations
 
-| Concern | Decision |
-| --- | --- |
-| External dependencies | Golden demo requires none |
-| Routes/distances | Predefined matrix for relevant Malaysian locations |
-| Carbon estimate | Configured factor, explicitly labelled "Illustrative estimate" |
-| Data reset | Reset Demo Data restores immutable seeds |
-| Deployment | Static GitHub Pages build using `HashRouter` |
-| Production build | Must contain no secrets or credentials |
+| Concern               | Decision                                                       |
+| --------------------- | -------------------------------------------------------------- |
+| External dependencies | Golden demo requires none                                      |
+| Routes/distances      | Predefined matrix for relevant Malaysian locations             |
+| Carbon estimate       | Configured factor, explicitly labelled "Illustrative estimate" |
+| Data reset            | Reset Demo Data restores immutable seeds                       |
+| Deployment            | Static GitHub Pages build using `HashRouter`                   |
+| Production build      | Must contain no secrets or credentials                         |
 
 ## Quality strategy
 

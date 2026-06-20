@@ -59,13 +59,13 @@ For BalikLoad implementation work, the Google Doc's **Tech Stack** tab is the te
 
 No development stack exists yet. Once initialized, replace `TBD` and mirror these commands in `README.md`.
 
-| Purpose | Command |
-| --- | --- |
-| Install | TBD |
-| Run locally | TBD |
-| Test | TBD |
-| Lint | TBD |
-| Type-check | TBD |
-| Build | TBD |
+| Purpose     | Command             |
+| ----------- | ------------------- |
+| Install     | `npm ci`            |
+| Run locally | `npm run dev`       |
+| Test        | `npm test`          |
+| Lint        | `npm run lint`      |
+| Type-check  | `npm run typecheck` |
+| Build       | `npm run build`     |
 
 Use the repository's documented package manager; do not introduce a second lockfile.

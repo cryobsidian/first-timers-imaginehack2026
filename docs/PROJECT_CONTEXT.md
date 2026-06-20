@@ -4,15 +4,15 @@ This is the repository snapshot of the confirmed BalikLoad plan. The Imaginehack
 
 ## Snapshot
 
-| Field | Current answer |
-| --- | --- |
-| Event | Imagine Hack 2026 |
-| Theme | Sustainability |
-| Project name | BalikLoad |
-| One-line pitch | Match spare capacity on commercial vehicles' return journeys with compatible SME shipments. |
-| Primary users | Commercial carriers and SME shippers |
-| Demo date and timezone | TBD |
-| Team roles | Frontend owner; logic and data owner |
+| Field                  | Current answer                                                                              |
+| ---------------------- | ------------------------------------------------------------------------------------------- |
+| Event                  | Imagine Hack 2026                                                                           |
+| Theme                  | Sustainability                                                                              |
+| Project name           | BalikLoad                                                                                   |
+| One-line pitch         | Match spare capacity on commercial vehicles' return journeys with compatible SME shipments. |
+| Primary users          | Commercial carriers and SME shippers                                                        |
+| Demo date and timezone | TBD                                                                                         |
+| Team roles             | Frontend owner; logic and data owner                                                        |
 
 ## Problem and solution
 
@@ -36,15 +36,15 @@ This is the repository snapshot of the confirmed BalikLoad plan. The Imaginehack
 
 > If an SME shipment uses compatible spare capacity on an existing commercial return trip instead of requiring a dedicated journey, then estimated transport emissions should decrease because the shipment avoids some dedicated-journey distance.
 
-| Measurement field | Definition |
-| --- | --- |
-| Baseline | A dedicated shipment journey over the estimated avoided distance |
-| Primary metric | Illustrative estimated CO2e saved in kilograms |
-| Formula | Avoided dedicated journey distance (km) x configured demo emission factor (kg CO2e/km) |
-| Product metric | Remaining vehicle capacity utilised and successful bookings |
-| Initial demo factor | `0.9 kg CO2e/km`, held in configuration |
-| Limitation | Illustrative estimate only; not audited carbon accounting |
-| Risks | Rebound demand, inaccurate distance assumptions, and overclaiming estimated savings |
+| Measurement field   | Definition                                                                             |
+| ------------------- | -------------------------------------------------------------------------------------- |
+| Baseline            | A dedicated shipment journey over the estimated avoided distance                       |
+| Primary metric      | Illustrative estimated CO2e saved in kilograms                                         |
+| Formula             | Avoided dedicated journey distance (km) x configured demo emission factor (kg CO2e/km) |
+| Product metric      | Remaining vehicle capacity utilised and successful bookings                            |
+| Initial demo factor | `0.9 kg CO2e/km`, held in configuration                                                |
+| Limitation          | Illustrative estimate only; not audited carbon accounting                              |
+| Risks               | Rebound demand, inaccurate distance assumptions, and overclaiming estimated savings    |
 
 ## Must demonstrate
 
@@ -60,8 +60,8 @@ No production backend, database, authentication/authorization, real-time sync, l
 
 ## Open questions
 
-| Question | Owner | Status |
-| --- | --- | --- |
-| What are the final judging rubric, demo duration, and submission deadline? | TBD | Open |
-| Which verified source should replace or validate the demo emission factor? | TBD | Open |
-| Who owns frontend work and who owns logic/data work? | Team | Open |
+| Question                                                                   | Owner | Status |
+| -------------------------------------------------------------------------- | ----- | ------ |
+| What are the final judging rubric, demo duration, and submission deadline? | TBD   | Open   |
+| Which verified source should replace or validate the demo emission factor? | TBD   | Open   |
+| Who owns frontend work and who owns logic/data work?                       | Team  | Open   |

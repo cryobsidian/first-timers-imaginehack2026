@@ -1,0 +1,16 @@
+[
+  {
+    "id": "shipment-golden",
+    "shipperName": "Kita Foods SME",
+    "origin": "Shah Alam",
+    "destination": "Butterworth",
+    "pickupFrom": "2026-06-21T08:00:00+08:00",
+    "pickupUntil": "2026-06-21T12:00:00+08:00",
+    "weightKg": 1200,
+    "pallets": 2,
+    "cargoType": "general",
+    "requiresRefrigeration": false,
+    "budget": 700,
+    "status": "open"
+  }
+]

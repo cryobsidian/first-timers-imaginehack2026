@@ -1,0 +1,51 @@
+[
+  {
+    "id": "trip-klang-penang",
+    "carrierId": "carrier-northstar",
+    "vehicleId": "vehicle-northstar-1",
+    "origin": "Klang",
+    "destination": "Penang",
+    "waypoints": [
+      "Shah Alam",
+      "Petaling Jaya",
+      "Kuala Lumpur",
+      "Rawang",
+      "Ipoh",
+      "Butterworth"
+    ],
+    "departureAt": "2026-06-21T10:00:00+08:00",
+    "availableWeightKg": 3000,
+    "availablePallets": 6,
+    "acceptedCargoTypes": ["general", "electronics"],
+    "pricePerKm": 1.6,
+    "status": "available"
+  },
+  {
+    "id": "trip-kl-ipoh",
+    "carrierId": "carrier-meridian",
+    "vehicleId": "vehicle-meridian-1",
+    "origin": "Kuala Lumpur",
+    "destination": "Ipoh",
+    "waypoints": ["Rawang"],
+    "departureAt": "2026-06-21T12:30:00+08:00",
+    "availableWeightKg": 2400,
+    "availablePallets": 5,
+    "acceptedCargoTypes": ["general", "electronics", "chilled"],
+    "pricePerKm": 1.9,
+    "status": "available"
+  },
+  {
+    "id": "trip-unverified",
+    "carrierId": "carrier-unverified",
+    "vehicleId": "vehicle-unverified-1",
+    "origin": "Klang",
+    "destination": "Penang",
+    "waypoints": ["Ipoh"],
+    "departureAt": "2026-06-21T10:00:00+08:00",
+    "availableWeightKg": 1000,
+    "availablePallets": 2,
+    "acceptedCargoTypes": ["general"],
+    "pricePerKm": 1.2,
+    "status": "available"
+  }
+]
