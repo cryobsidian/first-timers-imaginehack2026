@@ -26,7 +26,7 @@ function ShipmentRequestForm() {
     }
 
     setShipments([...shipments, newShipment])
-    navigate('/match')
+    navigate('/')
   }
 
   return (
