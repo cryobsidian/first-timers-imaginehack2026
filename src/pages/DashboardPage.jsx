@@ -28,7 +28,6 @@ function DashboardPage() {
       }
     })
 
-    // Store match result in localStorage
     localStorage.setItem('matchResult', JSON.stringify({
       truck,
       shipment: bestShipment,
@@ -108,6 +107,9 @@ function DashboardPage() {
                   <div className="card-body">
                     <h3>{truck.origin} → {truck.destination}</h3>
                     <p>{truck.capacity} tonnes | {truck.date}</p>
+                    <p style={{ fontSize: '0.75rem', color: '#15803d', fontWeight: 600, marginTop: '0.25rem' }}>
+                      Potential savings: ~RM {Math.round(Number(truck.capacity) * 300 * 0.50)}
+                    </p>
                     <button onClick={() => findBestMatch(truck)} style={{
                       marginTop: '0.5rem', padding: '0.5rem 1rem',
                       background: '#4ade80', color: '#111827', borderRadius: '0.5rem',
@@ -134,6 +136,9 @@ function DashboardPage() {
                   <div className="card-body">
                     <h3>{shipment.origin} → {shipment.destination}</h3>
                     <p>{shipment.weight} tonnes | {shipment.date}</p>
+                    <p style={{ fontSize: '0.75rem', color: '#6b7280', fontWeight: 600, marginTop: '0.25rem' }}>
+                      Est. cost if separate truck: ~RM {Math.round(Number(shipment.weight) * 300 * 0.80)}
+                    </p>
                     <button onClick={() => findBestTruck(shipment)} style={{
                       marginTop: '0.5rem', padding: '0.5rem 1rem',
                       background: '#111827', color: 'white', borderRadius: '0.5rem',

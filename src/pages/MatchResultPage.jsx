@@ -57,14 +57,29 @@ function MatchResultPage() {
             </div>
           </div>
 
-          {isMatch && (
-            <div style={{ background: '#f0fdf4', padding: '1rem', borderRadius: '0.75rem', border: '1px solid #bbf7d0', marginBottom: '1rem' }}>
-              <p style={{ fontWeight: 700, color: '#166534' }}>🌱 CO2 Savings</p>
-              <p style={{ fontSize: '2rem', fontWeight: 700, color: '#15803d' }}>{co2Saved}kg</p>
-              <p style={{ fontSize: '0.75rem', color: '#166534' }}>by avoiding an empty return trip</p>
-            </div>
-          )}
-
+         {isMatch && (
+  <div style={{ background: '#f0fdf4', padding: '1rem', borderRadius: '0.75rem', border: '1px solid #bbf7d0', marginBottom: '1rem' }}>
+    <p style={{ fontWeight: 700, color: '#166534', marginBottom: '0.5rem' }}>💰 Savings Breakdown</p>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.5rem' }}>
+      <div>
+        <p style={{ fontSize: '1.5rem', fontWeight: 700, color: '#15803d' }}>RM {Math.round(Number(shipment.weight) * 300 * 0.25)}</p>
+        <p style={{ fontSize: '0.75rem', color: '#166534' }}>Fuel saved</p>
+      </div>
+      <div>
+        <p style={{ fontSize: '1.5rem', fontWeight: 700, color: '#15803d' }}>RM {Math.round(Number(shipment.weight) * 300 * 0.15)}</p>
+        <p style={{ fontSize: '0.75rem', color: '#166534' }}>Driver cost saved</p>
+      </div>
+      <div>
+        <p style={{ fontSize: '1.5rem', fontWeight: 700, color: '#15803d' }}>RM {Math.round(Number(shipment.weight) * 300 * 0.10)}</p>
+        <p style={{ fontSize: '0.75rem', color: '#166534' }}>Carbon offset</p>
+      </div>
+    </div>
+    <p style={{ fontSize: '0.875rem', fontWeight: 700, color: '#166534', marginTop: '0.75rem' }}>
+      Total savings: ~RM {Math.round(Number(shipment.weight) * 300 * 0.50)}
+    </p>
+    <p style={{ fontSize: '0.75rem', color: '#166534' }}>by filling an empty return trip (300km estimated)</p>
+  </div>
+)}
           <Link to="/" style={{
             display: 'inline-block', padding: '0.75rem 2rem',
             background: '#111827', color: 'white', borderRadius: '0.75rem',
