@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
 import { App } from '../App'
@@ -133,5 +133,45 @@ describe('BalikLoad role navigation', () => {
         name: 'Choose your BalikLoad workspace.',
       }),
     ).toBeInTheDocument()
+  })
+
+  it('backs out of both role forms without creating records', async () => {
+    const user = userEvent.setup()
+    render(<App />)
+
+    await user.click(
+      await screen.findByRole('link', { name: /Log in as Carrier/ }),
+    )
+    const carrierList = await screen.findByRole('region', {
+      name: 'Carrier return trips',
+    })
+    const tripCount = within(carrierList).getAllByRole('article').length
+    await user.click(screen.getByRole('link', { name: 'Post Return Trip' }))
+    await user.click(
+      await screen.findByRole('link', {
+        name: 'Back to Carrier Dashboard',
+      }),
+    )
+    expect(
+      within(
+        await screen.findByRole('region', { name: 'Carrier return trips' }),
+      ).getAllByRole('article'),
+    ).toHaveLength(tripCount)
+
+    await user.click(screen.getByRole('link', { name: 'Home' }))
+    await user.click(await screen.findByRole('link', { name: /Log in as SME/ }))
+    const shipmentList = await screen.findByRole('region', {
+      name: 'SME shipments',
+    })
+    const shipmentCount = within(shipmentList).getAllByRole('article').length
+    await user.click(screen.getByRole('link', { name: 'Request Shipment' }))
+    await user.click(
+      await screen.findByRole('link', { name: 'Back to SME Dashboard' }),
+    )
+    expect(
+      within(
+        await screen.findByRole('region', { name: 'SME shipments' }),
+      ).getAllByRole('article'),
+    ).toHaveLength(shipmentCount)
   })
 })

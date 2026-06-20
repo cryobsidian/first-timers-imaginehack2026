@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { LOCATIONS } from '../config/routes'
 import { useApp } from '../context/AppContext'
 import type { CreateShipmentInput } from '../models'
@@ -47,6 +47,9 @@ export function ShipmentRequestForm() {
 
   return (
     <main className="main narrow">
+      <Link className="back-link" to="/sme">
+        Back to SME Dashboard
+      </Link>
       <form
         onSubmit={(event) => void handleSubmit(event)}
         className="form-card"
