@@ -518,3 +518,116 @@ nav a {
     text-align: left;
   }
 }
+
+.demo-mode {
+  background: #e8eee8;
+  border-radius: 999px;
+  color: #536159;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.45rem 0.7rem;
+  text-transform: uppercase;
+}
+.menu-hero {
+  min-height: calc(100vh - 70px);
+}
+.role-menu {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  max-width: 680px;
+}
+.role-card {
+  align-items: center;
+  background: white;
+  border: 1px solid #cdd9d0;
+  border-radius: 1rem;
+  display: flex;
+  gap: 0.9rem;
+  padding: 1.15rem;
+  text-decoration: none;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+.role-card:hover {
+  border-color: #45a96c;
+  box-shadow: 0 12px 28px rgba(23, 61, 42, 0.12);
+  transform: translateY(-2px);
+}
+.role-card strong,
+.role-card small {
+  display: block;
+}
+.role-card small {
+  color: #68776e;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  margin-top: 0.25rem;
+}
+.role-icon {
+  align-items: center;
+  background: #173d2a;
+  border-radius: 0.75rem;
+  color: white;
+  display: flex;
+  flex: 0 0 auto;
+  font-size: 0.85rem;
+  font-weight: 800;
+  height: 2.8rem;
+  justify-content: center;
+  width: 2.8rem;
+}
+.sme-role .role-icon {
+  background: #27834f;
+}
+.dashboard-heading {
+  align-items: center;
+  border-bottom: 1px solid #dfe6dc;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+}
+.dashboard-heading h1 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  letter-spacing: -0.045em;
+  margin: 0.4rem 0;
+}
+.dashboard-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: flex-end;
+}
+.role-dashboard-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 900px) {
+  .role-dashboard-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dashboard-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .dashboard-actions {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 620px) {
+  .role-menu,
+  .role-dashboard-list {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-actions .button {
+    flex: 1 1 100%;
+  }
+}

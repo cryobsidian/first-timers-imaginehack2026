@@ -35,7 +35,7 @@ export function ShipmentRequestForm() {
     }
     try {
       await createShipment(input)
-      navigate('/')
+      navigate('/sme')
     } catch (cause) {
       setError(
         cause instanceof Error

@@ -43,7 +43,7 @@ export function TruckPostForm() {
     }
     try {
       await createTrip(input)
-      navigate('/')
+      navigate('/carrier')
     } catch (cause) {
       setError(
         cause instanceof Error ? cause.message : 'Trip could not be created.',

@@ -44,8 +44,8 @@ export function MatchResultPage() {
 
   return (
     <main className="main">
-      <Link className="back-link" to="/">
-        Back to dashboard
+      <Link className="back-link" to="/sme">
+        Back to SME dashboard
       </Link>
       <div className="section-heading">
         <div>

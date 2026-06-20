@@ -29,12 +29,12 @@ Read [AGENTS.md](AGENTS.md), [project context](docs/PROJECT_CONTEXT.md), [archit
 
 ## Demo flow
 
-1. Open the seeded dashboard.
-2. Create or select an SME shipment.
-3. Review deterministic ranked matches and their explanations.
-4. Accept the strongest match.
-5. Confirm the shipment status, reduced trip capacity, and illustrative benefits.
-6. Use **Reset Demo Data** to restore the original scenario.
+1. Choose **Log in as Carrier** or **Log in as SME** from the main menu.
+2. In the carrier workspace, review or publish spare return capacity.
+3. In the SME workspace, create or select a shipment.
+4. Review deterministic ranked matches and their explanations.
+5. Accept the strongest match and confirm the updated booking and capacity.
+6. Use **Home** to switch roles or **Reset Demo Data** to restore the scenario.
 
 ## Deployment
 

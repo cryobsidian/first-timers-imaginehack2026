@@ -65,8 +65,8 @@ export function BookingConfirmationPage() {
           the configured demo emission factor. This is not audited carbon
           accounting.
         </p>
-        <Link className="button button-primary button-full" to="/">
-          Return to dashboard
+        <Link className="button button-primary button-full" to="/sme">
+          Return to SME dashboard
         </Link>
       </section>
     </main>

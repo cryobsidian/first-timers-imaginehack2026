@@ -4,8 +4,10 @@ import { ShipmentRequestForm } from './components/ShipmentRequestForm'
 import { TruckPostForm } from './components/TruckPostForm'
 import { AppProvider } from './context/AppContext'
 import { BookingConfirmationPage } from './pages/BookingConfirmationPage'
-import { DashboardPage } from './pages/DashboardPage'
+import { CarrierDashboardPage } from './pages/CarrierDashboardPage'
+import { MainMenuPage } from './pages/MainMenuPage'
 import { MatchResultPage } from './pages/MatchResultPage'
+import { SmeDashboardPage } from './pages/SmeDashboardPage'
 import './App.css'
 
 export function App() {
@@ -14,7 +16,9 @@ export function App() {
       <AppProvider>
         <AppShell>
           <Routes>
-            <Route path="/" element={<DashboardPage />} />
+            <Route path="/" element={<MainMenuPage />} />
+            <Route path="/carrier" element={<CarrierDashboardPage />} />
+            <Route path="/sme" element={<SmeDashboardPage />} />
             <Route path="/post-trip" element={<TruckPostForm />} />
             <Route path="/request-shipment" element={<ShipmentRequestForm />} />
             <Route path="/matches/:shipmentId" element={<MatchResultPage />} />
