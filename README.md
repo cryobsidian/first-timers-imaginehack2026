@@ -1,26 +1,16 @@
-# Imagine Hack 2026
+# React + Vite
 
-A sustainability-themed hackathon project. The product idea, target users, and implementation stack remain open until discovery is complete.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Start here
+Currently, two official plugins are available:
 
-1. Read [`AGENTS.md`](AGENTS.md) for repository working rules.
-2. Define the problem and success measures in [`docs/PROJECT_CONTEXT.md`](docs/PROJECT_CONTEXT.md).
-3. Record technical boundaries in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
-4. Select work from [`docs/TASKS.md`](docs/TASKS.md).
-5. Capture consequential choices in [`docs/DECISIONS.md`](docs/DECISIONS.md).
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Current status
+## React Compiler
 
-The repository is in discovery. No product concept or technical stack has been selected yet.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Working agreement
+## Expanding the ESLint configuration
 
-- Optimize for a demonstrable end-to-end outcome.
-- Make sustainability impact measurable and avoid unsupported claims.
-- Keep scope achievable within the hackathon.
-- Prefer simple, reversible decisions until evidence justifies complexity.
-
-## Development
-
-Setup, run, test, lint, and build commands will be added here when the stack is selected. Do not guess these commands; update this section alongside the initial scaffold.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
