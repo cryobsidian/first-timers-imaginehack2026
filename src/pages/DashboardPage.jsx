@@ -14,14 +14,14 @@ function DashboardPage() {
             padding: '1.5rem 3rem', background: '#111827', color: 'white',
             borderRadius: '1rem', textDecoration: 'none', fontWeight: 700, fontSize: '1.125rem'
           }}>
-            🚛 Post Available Truck
+            Post Available Truck
           </Link>
           
           <Link to="/request-shipment" style={{
             padding: '1.5rem 3rem', background: '#4ade80', color: '#111827',
             borderRadius: '1rem', textDecoration: 'none', fontWeight: 700, fontSize: '1.125rem'
           }}>
-            📦 Request Shipment
+             Request Shipment
           </Link>
         </div>
       </main>
