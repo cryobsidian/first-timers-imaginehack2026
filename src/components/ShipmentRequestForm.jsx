@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useLocalStorage from '../hooks/useLocalStorage'
 
-
 function ShipmentRequestForm() {
   const [origin, setOrigin] = useState('')
   const [destination, setDestination] = useState('')
@@ -27,7 +26,7 @@ function ShipmentRequestForm() {
     }
 
     setShipments([...shipments, newShipment])
-    navigate('/')
+    navigate('/match')
   }
 
   return (
@@ -35,7 +34,7 @@ function ShipmentRequestForm() {
       <div className="main">
         <form onSubmit={handleSubmit} className="form-card">
           <h2>Request Shipment</h2>
-          
+
           <div className="form-group">
             <label>Origin</label>
             <input 
@@ -76,7 +75,7 @@ function ShipmentRequestForm() {
               onChange={(e) => setDate(e.target.value)} 
             />
           </div>
-          
+
           <button type="submit" disabled={!isValid} className="btn-submit">
             Find Match
           </button>
