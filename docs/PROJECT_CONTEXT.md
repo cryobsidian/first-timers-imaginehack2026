@@ -1,6 +1,6 @@
 # Project Context
 
-This is the repository snapshot of the confirmed BalikLoad plan. The Imaginehack Google Doc's **Tech Stack** tab is the upstream technical source of truth.
+This is the repository snapshot of the confirmed CargoLink plan. The Imaginehack Google Doc's **Tech Stack** tab is the upstream technical source of truth.
 
 ## Snapshot
 
@@ -8,7 +8,7 @@ This is the repository snapshot of the confirmed BalikLoad plan. The Imaginehack
 | ---------------------- | ------------------------------------------------------------------------------------------- |
 | Event                  | Imagine Hack 2026                                                                           |
 | Theme                  | Sustainability                                                                              |
-| Project name           | BalikLoad                                                                                   |
+| Project name           | CargoLink                                                                                   |
 | One-line pitch         | Match spare capacity on commercial vehicles' return journeys with compatible SME shipments. |
 | Primary users          | Commercial carriers and SME shippers                                                        |
 | Demo date and timezone | TBD                                                                                         |
@@ -26,7 +26,7 @@ This is the repository snapshot of the confirmed BalikLoad plan. The Imaginehack
 
 1. A verified carrier publishes spare capacity on a Klang Valley to Penang return journey.
 2. An SME creates a compatible palletised shipment.
-3. BalikLoad removes incompatible journeys and ranks the remaining matches.
+3. CargoLink removes incompatible journeys and ranks the remaining matches.
 4. The user inspects the highest-ranked result and its score explanation.
 5. The shipper accepts the match.
 6. The shipment becomes booked and the trip's remaining capacity decreases atomically.

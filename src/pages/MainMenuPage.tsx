@@ -7,7 +7,7 @@ export function MainMenuPage() {
       <section className="hero menu-hero">
         <div>
           <p className="eyebrow">Return loaded. Waste avoided.</p>
-          <h1>Choose your BalikLoad workspace.</h1>
+          <h1>Choose your CargoLink workspace.</h1>
           <p>
             Explore the demo as a verified commercial carrier or as an SME
             looking for compatible return-trip capacity.

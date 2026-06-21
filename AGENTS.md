@@ -11,7 +11,7 @@ Before changing code or project scope:
 
 The Google Doc is the upstream source for hackathon briefs, tracks, sponsor research, team notes, and new constraints. Repository documentation is the implementation snapshot for the selected direction.
 
-For BalikLoad implementation work, the Google Doc's **Tech Stack** tab is the technical source of truth and overrides older exploratory notes. Follow it unless the user explicitly changes the plan.
+For CargoLink implementation work, the Google Doc's **Tech Stack** tab is the technical source of truth and overrides older exploratory notes. Follow it unless the user explicitly changes the plan.
 
 - Re-fetch the Google Doc when starting work that depends on requirements, judging criteria, sponsors, tracks, research, or product scope; do not rely on a previous agent's cached summary.
 - Treat the **Idea Dump** as unconfirmed possibilities unless another section or a recorded team decision explicitly selects one.

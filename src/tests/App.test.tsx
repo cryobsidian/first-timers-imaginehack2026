@@ -3,13 +3,13 @@ import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
 import { App } from '../App'
 
-describe('BalikLoad role navigation', () => {
+describe('CargoLink role navigation', () => {
   it('shows an isolated main menu with both demo roles', async () => {
     render(<App />)
 
     expect(
       await screen.findByRole('heading', {
-        name: 'Choose your BalikLoad workspace.',
+        name: 'Choose your CargoLink workspace.',
       }),
     ).toBeInTheDocument()
     expect(
@@ -40,7 +40,7 @@ describe('BalikLoad role navigation', () => {
     await user.click(screen.getByRole('link', { name: 'Home' }))
     expect(
       await screen.findByRole('heading', {
-        name: 'Choose your BalikLoad workspace.',
+        name: 'Choose your CargoLink workspace.',
       }),
     ).toBeInTheDocument()
   })
@@ -130,7 +130,7 @@ describe('BalikLoad role navigation', () => {
 
     expect(
       await screen.findByRole('heading', {
-        name: 'Choose your BalikLoad workspace.',
+        name: 'Choose your CargoLink workspace.',
       }),
     ).toBeInTheDocument()
   })

@@ -56,7 +56,7 @@ The configured demonstration factor is `0.9 kg CO2e/km`. All displayed results a
 ### Data and persistence
 
 - Immutable JSON files provide reliable seed data.
-- Browser `localStorage` stores demo changes under the versioned `CargoLink:v1` namespace.
+- Browser `localStorage` stores demo changes under the versioned `cargolink:v1` namespace.
 - A repository interface separates React components from persistence.
 - **Reset Demo Data** restores the original scenario.
 - No credentials, personal data, or API keys are required.

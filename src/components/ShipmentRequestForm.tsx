@@ -57,7 +57,7 @@ export function ShipmentRequestForm() {
         <p className="eyebrow">SME shipper workspace</p>
         <h1>Request a shipment</h1>
         <p className="muted">
-          Describe the load and BalikLoad will rank compatible return trips.
+          Describe the load and CargoLink will rank compatible return trips.
         </p>
         {error && (
           <div className="error" role="alert">

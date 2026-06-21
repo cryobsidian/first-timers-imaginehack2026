@@ -7,7 +7,7 @@ The Imaginehack Google Doc's **Tech Stack** tab remains the upstream technical s
 - [x] Scaffold React, Vite, and strict TypeScript.
 - [x] Configure `HashRouter` and the GitHub Pages base path.
 - [x] Define domain models and Promise-based repository contracts.
-- [x] Add immutable Malaysian demo seed data and `balikload:v1` persistence.
+- [x] Add immutable Malaysian demo seed data and `cargolink:v1` persistence.
 - [x] Implement validation, hard filters, weighted ranking, and explanations.
 - [x] Implement an idempotent booking transaction with capacity protection.
 - [x] Add configured illustrative commercial and environmental estimates.

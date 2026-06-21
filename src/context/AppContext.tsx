@@ -13,7 +13,7 @@ import type {
   CreateShipmentInput,
   Match,
 } from '../models'
-import { LocalBalikLoadRepository } from '../repositories/LocalBalikLoadRepository'
+import { LocalCargoLinkRepository } from '../repositories/LocalCargoLinkRepository'
 import { acceptMatch as acceptPersistedMatch } from '../services/bookingService'
 import { findMatchesForShipment } from '../services/matchingService'
 import {
@@ -35,7 +35,7 @@ interface AppContextValue {
 const AppContext = createContext<AppContextValue | null>(null)
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [repository] = useState(() => new LocalBalikLoadRepository())
+  const [repository] = useState(() => new LocalCargoLinkRepository())
   const [state, setState] = useState<AppState | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)

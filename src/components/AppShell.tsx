@@ -8,7 +8,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         <Link className="brand" to="/">
           <span className="brand-mark">BL</span>
           <span>
-            <strong>BalikLoad</strong>
+            <strong>CargoLink</strong>
             <small>Smarter return journeys</small>
           </span>
         </Link>

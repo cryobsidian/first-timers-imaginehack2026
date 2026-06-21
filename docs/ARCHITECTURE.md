@@ -21,16 +21,16 @@ React pages and components
 Application services
           |
           v
-BalikLoadRepository interface (Promise-based)
+CargoLinkRepository interface (Promise-based)
           |
           v
-LocalBalikLoadRepository
+LocalCargoLinkRepository
           |
           +--> bundled immutable JSON seed data
-          +--> localStorage namespace: balikload:v1
+          +--> localStorage namespace: cargolink:v1
 ```
 
-There is no deployed Node.js or Express backend. Node.js is local tooling only. A future `ApiBalikLoadRepository` may replace local persistence without requiring UI rewrites.
+There is no deployed Node.js or Express backend. Node.js is local tooling only. A future `ApiCargoLinkRepository` may replace local persistence without requiring UI rewrites.
 
 ## Boundaries
 
@@ -54,8 +54,8 @@ There is no deployed Node.js or Express backend. Node.js is local tooling only. 
 ## Persistence lifecycle
 
 1. Read immutable bundled JSON seed data on first load.
-2. Copy it into `localStorage` under `balikload:v1` with a `schemaVersion`.
-3. Read subsequent state through `LocalBalikLoadRepository`.
+2. Copy it into `localStorage` under `cargolink:v1` with a `schemaVersion`.
+3. Read subsequent state through `LocalCargoLinkRepository`.
 4. Reset safely to seed data when requested or when the schema is incompatible.
 5. Persist booking state as one transaction after re-reading current state.
 

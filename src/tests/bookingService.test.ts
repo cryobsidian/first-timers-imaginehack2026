@@ -1,13 +1,13 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { LocalBalikLoadRepository } from '../repositories/LocalBalikLoadRepository'
+import { LocalCargoLinkRepository } from '../repositories/LocalCargoLinkRepository'
 import { acceptMatch } from '../services/bookingService'
 import { findMatchesForShipment } from '../services/matchingService'
 
-let repository: LocalBalikLoadRepository
+let repository: LocalCargoLinkRepository
 
 beforeEach(async () => {
   window.localStorage.clear()
-  repository = new LocalBalikLoadRepository(window.localStorage)
+  repository = new LocalCargoLinkRepository(window.localStorage)
   await repository.initialize()
 })
 

@@ -9,7 +9,7 @@ import type {
   Vehicle,
 } from '../models'
 
-export interface BalikLoadRepository {
+export interface CargoLinkRepository {
   initialize(): Promise<void>
   getState(): Promise<AppState>
   getCarriers(): Promise<Carrier[]>

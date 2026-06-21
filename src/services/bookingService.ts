@@ -1,8 +1,8 @@
 import type { AppState, Match } from '../models'
-import type { BalikLoadRepository } from '../repositories/BalikLoadRepository'
+import type { CargoLinkRepository } from '../repositories/CargoLinkRepository'
 
 export async function acceptMatch(
-  repository: BalikLoadRepository,
+  repository: CargoLinkRepository,
   matchId: string,
 ): Promise<Match> {
   let accepted: Match | undefined

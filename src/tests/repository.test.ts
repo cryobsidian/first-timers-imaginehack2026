@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { SCHEMA_VERSION, STORAGE_KEY } from '../config/storage'
-import { LocalBalikLoadRepository } from '../repositories/LocalBalikLoadRepository'
+import { LocalCargoLinkRepository } from '../repositories/LocalCargoLinkRepository'
 
 class MemoryStorage implements Storage {
   private data = new Map<string, string>()
@@ -24,21 +24,21 @@ class MemoryStorage implements Storage {
   }
 }
 
-describe('LocalBalikLoadRepository', () => {
+describe('LocalCargoLinkRepository', () => {
   it('persists state across repository instances', async () => {
     const storage = new MemoryStorage()
-    const first = new LocalBalikLoadRepository(storage)
+    const first = new LocalCargoLinkRepository(storage)
     await first.initialize()
     const shipment = (await first.getShipments())[0]
     await first.saveShipment({ ...shipment, shipperName: 'Persisted SME' })
-    const second = new LocalBalikLoadRepository(storage)
+    const second = new LocalCargoLinkRepository(storage)
     expect((await second.getShipments())[0].shipperName).toBe('Persisted SME')
   })
 
   it('safely resets an incompatible schema', async () => {
     const storage = new MemoryStorage()
     storage.setItem(STORAGE_KEY, JSON.stringify({ schemaVersion: 999 }))
-    const repository = new LocalBalikLoadRepository(storage)
+    const repository = new LocalCargoLinkRepository(storage)
     await repository.initialize()
     const state = await repository.getState()
     expect(state.schemaVersion).toBe(SCHEMA_VERSION)
@@ -47,7 +47,7 @@ describe('LocalBalikLoadRepository', () => {
 
   it('restores original seed data', async () => {
     const storage = new MemoryStorage()
-    const repository = new LocalBalikLoadRepository(storage)
+    const repository = new LocalCargoLinkRepository(storage)
     await repository.initialize()
     const shipment = (await repository.getShipments())[0]
     await repository.saveShipment({ ...shipment, shipperName: 'Changed' })

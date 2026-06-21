@@ -14,7 +14,7 @@ import type {
   Shipment,
   Vehicle,
 } from '../models'
-import type { BalikLoadRepository } from './BalikLoadRepository'
+import type { CargoLinkRepository } from './CargoLinkRepository'
 
 function seedState(): AppState {
   return structuredClone({
@@ -27,7 +27,7 @@ function seedState(): AppState {
   })
 }
 
-export class LocalBalikLoadRepository implements BalikLoadRepository {
+export class LocalCargoLinkRepository implements CargoLinkRepository {
   private transactionQueue: Promise<void> = Promise.resolve()
 
   constructor(private readonly storage: Storage = window.localStorage) {}
@@ -138,7 +138,7 @@ export class LocalBalikLoadRepository implements BalikLoadRepository {
 
   private readRequired(): AppState {
     const state = this.read()
-    if (!state) throw new Error('BalikLoad data could not be initialized.')
+    if (!state) throw new Error('CargoLink data could not be initialized.')
     return state
   }
 
