@@ -25,6 +25,7 @@ Record choices that constrain future work. Use the next sequential ID. Supersede
 - **Alternatives:** Scaffold a conventional web stack immediately.
 - **Consequences:** Discovery stays explicit and avoids premature lock-in; implementation waits for a narrow problem and stack choice.
 - **Revisit trigger:** The target user, core journey, impact metric, and hackathon constraints are defined.
+
 ## ADR-002: Build BalikLoad as a static repository-backed SPA
 
 - **Date:** 2026-06-20
