@@ -19,10 +19,6 @@ export function CarrierDashboardPage() {
       </main>
     )
 
-  const bookableTrips = state.trips.filter((trip) =>
-    ['available', 'partially_booked'].includes(trip.status),
-  )
-
   return (
     <main className="main">
       <div className="dashboard-heading">
@@ -52,9 +48,6 @@ export function CarrierDashboardPage() {
 
       <div className="section-heading">
         <h2>Your return trips</h2>
-        <span className="status-pill">
-          {bookableTrips.length} bookable trips
-        </span>
       </div>
 
       <section
@@ -71,17 +64,13 @@ export function CarrierDashboardPage() {
           return (
             <article className="card" key={trip.id}>
               <div className="card-topline">
-                <span>
-                  {carrier?.verified ? 'Verified carrier' : 'Unverified'}
-                </span>
+                <span>{carrier?.name ?? 'Logistics Company A'}</span>
                 <strong>{trip.status.replace('_', ' ')}</strong>
               </div>
               <h4>
                 {trip.origin} to {trip.destination}
               </h4>
-              <p>
-                {carrier?.name} / {vehicle?.vehicleType}
-              </p>
+              <p>{vehicle?.vehicleType}</p>
               <CapacityIndicator
                 available={trip.availableWeightKg}
                 maximum={vehicle?.maxWeightKg ?? trip.availableWeightKg}

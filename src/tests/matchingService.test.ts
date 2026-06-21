@@ -25,9 +25,15 @@ const trip = trips[0] as ReturnTrip
 
 describe('matching hard filters', () => {
   it('rejects an unverified carrier', () => {
-    expect(
-      isCompatible(shipment, trips[2] as ReturnTrip, context).reasons,
-    ).toContain('Carrier is not verified.')
+    const unverifiedTrip = {
+      ...trip,
+      id: 'trip-unverified-test',
+      carrierId: 'carrier-unverified',
+      vehicleId: 'vehicle-unverified-1',
+    }
+    expect(isCompatible(shipment, unverifiedTrip, context).reasons).toContain(
+      'Carrier is not verified.',
+    )
   })
 
   it('rejects insufficient weight capacity', () => {

@@ -54,7 +54,6 @@ describe('booking transaction', () => {
       await repository.saveMatch({
         ...first,
         id: 'competing-match',
-        tripId: 'trip-kl-ipoh',
       })
     }
     await acceptMatch(repository, matches[0].id)
