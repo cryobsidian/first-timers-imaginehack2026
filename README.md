@@ -1,12 +1,12 @@
-# BalikLoad
+# CargoLink
 
 > Imagine Hack 2026 sustainability project by **Team First Timers**
 
 ## Project Title and Description
 
-**BalikLoad** is a logistics-matching prototype that connects spare capacity on commercial vehicles' return journeys with compatible SME shipments.
+**CargoLink** is a logistics-matching prototype that connects spare capacity on commercial vehicles' return journeys with compatible SME shipments.
 
-Commercial vehicles often complete a delivery and travel back with unused cargo space. At the same time, small and medium-sized businesses need affordable and reliable freight options. BalikLoad matches these two needs using route, timing, capacity, cargo, vehicle, carrier-reliability, and commercial criteria.
+Commercial vehicles often complete a delivery and travel back with unused cargo space. At the same time, small and medium-sized businesses need affordable and reliable freight options. CargoLink matches these two needs using route, timing, capacity, cargo, vehicle, carrier-reliability, and commercial criteria.
 
 The hackathon MVP demonstrates how better utilisation of journeys that are already taking place could reduce empty running, create additional carrier revenue, lower transport costs for SMEs, and avoid some dedicated freight journeys.
 
@@ -24,7 +24,7 @@ The hackathon MVP demonstrates how better utilisation of journeys that are alrea
 
 ## Project Overview
 
-BalikLoad provides three primary screens:
+CargoLink provides three primary screens:
 
 1. **Main menu** - choose the Carrier or SME demonstration workspace. The role buttons are navigation controls and do not perform real authentication.
 2. **Carrier dashboard** - review return trips, remaining capacity, trip status, and pricing, or publish a new return journey.
@@ -36,7 +36,7 @@ The application includes a bundled Klang Valley-to-Penang demonstration scenario
 
 ### Matching workflow
 
-BalikLoad applies two matching stages:
+CargoLink applies two matching stages:
 
 1. **Hard compatibility filtering** removes trips with incompatible route direction, pickup time, cargo type, refrigeration, carrier verification, status, weight, or pallet capacity.
 2. **Weighted ranking** scores compatible trips using route fit, capacity utilisation, time fit, cargo and vehicle fit, carrier reliability, profitability, and estimated detour.
@@ -56,7 +56,7 @@ The configured demonstration factor is `0.9 kg CO2e/km`. All displayed results a
 ### Data and persistence
 
 - Immutable JSON files provide reliable seed data.
-- Browser `localStorage` stores demo changes under the versioned `balikload:v1` namespace.
+- Browser `localStorage` stores demo changes under the versioned `CargoLink:v1` namespace.
 - A repository interface separates React components from persistence.
 - **Reset Demo Data** restores the original scenario.
 - No credentials, personal data, or API keys are required.
@@ -80,7 +80,7 @@ The application uses `HashRouter` so client-side navigation works on static GitH
 
 ### Reliable demos without external services
 
-Live routing, authentication, databases, and APIs introduce network and credential risks during a hackathon demonstration. BalikLoad uses bundled Malaysian route data, deterministic services, and local persistence so the golden flow remains available offline.
+Live routing, authentication, databases, and APIs introduce network and credential risks during a hackathon demonstration. CargoLink uses bundled Malaysian route data, deterministic services, and local persistence so the golden flow remains available offline.
 
 ### Explainable matching
 
